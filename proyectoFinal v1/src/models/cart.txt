@@ -1,0 +1,50 @@
+[
+  {
+    "products": [
+      {
+        "title": "Calculadora",
+        "description": "Es una calculadora",
+        "code": "calculadora420",
+        "price": 234.56,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "stock": true,
+        "timestamp": 1642370884552,
+        "id": 2
+      }
+    ],
+    "timestamp": 1646197107189,
+    "id": 1
+  },
+  {
+    "products": [
+      {
+        "title": "Escuadra",
+        "description": "Es una escuadra",
+        "code": "escuadramagica123",
+        "price": 123.45,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+        "stock": true,
+        "timestamp": 1642370596499,
+        "id": 1
+      }
+    ],
+    "timestamp": 1646197264849,
+    "id": 2
+  },
+  {
+    "products": [
+      {
+        "title": "Escuadra",
+        "description": "Es una escuadra",
+        "code": "escuadramagica123",
+        "price": 123.45,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+        "stock": true,
+        "timestamp": 1642370596499,
+        "id": 1
+      }
+    ],
+    "timestamp": 1646197364079,
+    "id": 3
+  }
+]

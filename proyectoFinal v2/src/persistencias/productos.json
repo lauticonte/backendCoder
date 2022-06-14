@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"timestamp": "Wed Jun 30 2021 12:24:34",
+		"nombre": "Escuadra",
+		"descripcion": "artículo de librería",
+		"precio": 123.45,
+		"foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+		"codigo": 4546,
+		"stock": 5
+	},
+	{
+		"id": 2,
+		"timestamp": "Wed Jun 30 2021 12:24:34",
+		"nombre": "Calculadora",
+		"descripcion": "librería",
+		"precio": 234.56,
+		"foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+		"codigo": 8745,
+		"stock": 9
+	},
+	{
+		"id": 3,
+		"timestamp": "Wed Jun 30 2021 12:24:34",
+		"nombre": "Globo Terráqueo",
+		"descripcion": "librería",
+		"precio": 345.67,
+		"foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+		"codigo": 8345,
+		"stock": 8
+	}
+]

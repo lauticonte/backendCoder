@@ -1,0 +1,6 @@
+[2022-06-07T03:49:12.719] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'status')
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:15:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:50:28.705] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'status')
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:15:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

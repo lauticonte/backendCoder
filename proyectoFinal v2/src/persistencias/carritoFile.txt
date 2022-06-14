@@ -1,0 +1,16 @@
+[
+	{
+		"id": 1,
+		"timestamp": "Wed, 30 Jun 2021 19:10:14 GMT",
+		"producto": {
+			"id": 3,
+			"timestamp": "Wed Jun 30 2021 12:24:34",
+			"nombre": "Globo Terráqueo",
+			"descripcion": "librería",
+			"precio": 345.67,
+			"foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+			"codigo": 8345,
+			"stock": 8
+		}
+	}
+]

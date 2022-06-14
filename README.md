@@ -1,2 +1,2 @@
 # backendCoder
-Curso de Programación Backend - Coderhouse 2022
+Curso de programación backend - Coderhouse 2022

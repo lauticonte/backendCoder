@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Escuadra",
+    "description": "Es una escuadra",
+    "code": "escuadramagica123",
+    "price": 123.45,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    "stock": true,
+    "timestamp": 1642370596499,
+    "id": 1
+  },
+  {
+    "title": "Calculadora",
+    "description": "Es una calculadora",
+    "code": "calculadora420",
+    "price": 234.56,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+    "stock": true,
+    "timestamp": 1642370884552,
+    "id": 2
+  },
+  {
+    "title": "Globo Terráqueo",
+    "description": "Es un globo terraqueo",
+    "code": "gto",
+    "price": 345.67,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+    "stock": true,
+    "timestamp": 1642371036890,
+    "id": 3
+  },
+  {
+    "title": "Front",
+    "description": "probando frontend",
+    "code": "5234r",
+    "price": "543.43",
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/font-awesome-solid/640/diagram-project-256.png",
+    "stock": true,
+    "timestamp": 1645821962747,
+    "id": 4
+  }
+]

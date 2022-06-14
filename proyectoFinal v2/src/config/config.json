@@ -1,0 +1,5 @@
+{
+  "persistencia": "mongo",
+  "typeMongo" : "MONGOATLAS"
+}
+

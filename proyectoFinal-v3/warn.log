@@ -1,0 +1,312 @@
+[2022-06-07T00:56:42.954] [WARN] default - Ruta /favicon.ico método GET no implementados
+[2022-06-07T01:28:41.875] [WARN] default - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:372:5)
+    at ServerResponse.setHeader (node:_http_outgoing:576:11)
+    at ServerResponse.header (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.location (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\response.js:915:15)
+    at ServerResponse.redirect (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\response.js:953:18)
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\productos.js:47:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async postProductos (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\productos.js:45:5) {
+  code: 'ERR_HTTP_HEADERS_SENT'
+}
+[2022-06-07T01:31:08.815] [WARN] default - CastError: Cast to ObjectId failed for value "3" (type string) at path "_id" for model "Productos"
+    at model.Query.exec (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4719:21)
+    at Query.then (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4818:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"3"',
+  kind: 'ObjectId',
+  value: '3',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at SchemaType.applySetters (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-06-07T01:31:08.823] [WARN] default - Error: Producto no encontrado
+    at deleteProductos (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\productos.js:93:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T02:34:40.054] [WARN] default - TypeError: Cannot read properties of undefined (reading '_id')
+    at postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:29:31)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:47:12)
+[2022-06-07T02:36:57.165] [WARN] default - TypeError: Cannot read properties of undefined (reading '_id')
+    at postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:29:31)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:47:12)
+[2022-06-07T02:57:28.134] [WARN] default - TypeError: Cannot read properties of undefined (reading '_id')
+    at postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:29:31)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:47:12)
+[2022-06-07T03:00:14.840] [WARN] default - TypeError: Cannot read properties of undefined (reading '_id')
+    at postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:29:31)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:47:12)
+[2022-06-07T03:01:06.362] [WARN] default - Invalid Password
+[2022-06-07T03:01:18.295] [WARN] default - Error: Debes estar autenticado para crear un carrito
+    at postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:40:13)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:47:12)
+[2022-06-07T03:01:50.182] [WARN] default - Error: Producto no encontrado
+    at Productos.getProductById (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\daos\productos.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:30:24)
+[2022-06-07T03:01:50.185] [WARN] default - Error: No se puede crear el carrito porque el producto no existe
+    at postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:03:10.655] [WARN] default - Error: Producto no encontrado
+    at Productos.getProductById (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\daos\productos.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:30:24)
+[2022-06-07T03:03:10.658] [WARN] default - Error: No se puede crear el carrito porque el producto no existe
+    at postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:03:56.987] [WARN] default - Error: Producto no encontrado
+    at Productos.getProductById (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\daos\productos.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:31:24)
+[2022-06-07T03:03:56.989] [WARN] default - Error: No se puede crear el carrito porque el producto no existe
+    at postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:33:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:04:31.644] [WARN] default - Error: Producto no encontrado
+    at Productos.getProductById (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\daos\productos.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:31:24)
+[2022-06-07T03:04:31.646] [WARN] default - Error: No se puede crear el carrito porque el producto no existe
+    at postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:33:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:05:58.784] [WARN] default - ReferenceError: logger is not defined
+    at isAuth (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\middlewares\authentication.js:14:5)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:47:12)
+[2022-06-07T03:13:16.805] [WARN] default - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:372:5)
+    at ServerResponse.setHeader (node:_http_outgoing:576:11)
+    at ServerResponse.header (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.location (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\response.js:915:15)
+    at ServerResponse.redirect (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\response.js:953:18)
+    at postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:39:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ERR_HTTP_HEADERS_SENT'
+}
+[2022-06-07T03:28:06.955] [WARN] default - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Carritos"
+    at model.Query.exec (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4719:21)
+    at Query.then (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4818:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at SchemaType.applySetters (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-06-07T03:28:06.961] [WARN] default - Error: Ese carrito no existe o no tiene productos
+    at getProductsFromCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:16:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:29:03.046] [WARN] default - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Carritos"
+    at model.Query.exec (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4719:21)
+    at Query.then (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4818:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at SchemaType.applySetters (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-06-07T03:29:03.050] [WARN] default - Error: Ese carrito no existe o no tiene productos
+    at getProductsFromCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:16:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:46:24.752] [WARN] default - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Carritos"
+    at model.Query.exec (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4719:21)
+    at Query.then (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4818:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at SchemaType.applySetters (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-06-07T03:46:24.758] [WARN] default - Error: Ese carrito no existe o no tiene productos
+    at getProductsFromCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:28:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:49:08.639] [WARN] default - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Carritos"
+    at model.Query.exec (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4719:21)
+    at Query.then (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4818:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at SchemaType.applySetters (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-06-07T03:49:08.646] [WARN] default - Error: Ese carrito no existe o no tiene productos
+    at getProductsFromCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:33:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:49:12.719] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'status')
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:15:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:50:28.705] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'status')
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:15:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:53:57.471] [WARN] default - TypeError: Cannot read properties of undefined (reading 'status')
+    at getCarts (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:17:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:54:58.127] [WARN] default - ReferenceError: carrito is not defined
+    at postCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:48:7)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:144:13)
+    at isAuth (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\middlewares\authentication.js:16:12)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\express\lib\router\index.js:346:12)
+[2022-06-07T03:55:11.183] [WARN] default - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Carritos"
+    at model.Query.exec (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4719:21)
+    at Query.then (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4818:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at SchemaType.applySetters (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-06-07T03:55:11.190] [WARN] default - Error: Ese carrito no existe o no tiene productos
+    at getProductsFromCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:34:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-07T03:56:08.332] [WARN] default - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Carritos"
+    at model.Query.exec (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4719:21)
+    at Query.then (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:4818:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast\objectid.js:24:12)
+      at ObjectId.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schema\objectid.js:245:12)
+      at SchemaType.applySetters (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1189:12)
+      at SchemaType._castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1623:15)
+      at SchemaType.castForQuery (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1613:15)
+      at SchemaType.castForQueryWrapper (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\schematype.js:1590:20)
+      at cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\cast.js:344:32)
+      at Query.cast (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\node_modules\mongoose\lib\query.js:5141:12),
+  valueType: 'string'
+}
+[2022-06-07T03:56:08.341] [WARN] default - Error: Ese carrito no existe o no tiene productos
+    at getProductsFromCart (D:\GitHub\lauticonte\backendCoder\proyectoFinal-v3\src\controllers\carritos.js:34:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

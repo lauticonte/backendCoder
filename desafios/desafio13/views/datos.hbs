@@ -1,0 +1,25 @@
+<header>
+  <h1 style="color:blue;">Lista de productos</h1>
+</header>
+<main>
+  {{#if arrayDeProductos}}
+    <div class="table-responsive">
+      <table class="table table-dark">
+        <tr style="color: yellow;"> <th>Nombre</th> <th>Precio</th> <th>Thumbnail</th> </tr>
+        {{#each arrayDeProductos}}
+          <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.price}}</td>
+            <td><img src="{{this.thumbnail}}" alt="Imagen del producto"></td>
+          </tr>
+        {{/each}}
+      </table>
+    </div>
+  {{/if}}
+  {{#unless arrayDeProductos}}
+    <h3 class="alert alert-danger">{{err.message}}</h3>
+  {{/unless}}
+  </main>
+<footer>
+  <a href="/">Añadir producto</a>
+</footer>

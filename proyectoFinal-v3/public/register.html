@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 style="color:blue;">Registrarse</h1>
+    </header>
+    <main>
+      <form action="/api/register" method="post">
+        <div class="form-group">
+          <label for="username"><b>Email</b></label>
+          <input
+            id="username"
+            class="form-control"
+            type="text"
+            name="username"
+            required
+          />
+          <label for="password"><b>Contraseña</b></label>
+          <input type="password" class="form-control" name="password" id="password" required>
+          <label for="name"><b>Tu nombre</b></label>
+          <input type="text" class="form-control" name="name" id="name" required>
+          <label for="address"><b>Tu direccio´n</b></label>
+          <input type="text" class="form-control" name="address" id="address" required>
+          <label for="age"><b>Tu edad</b></label>
+          <input type="number" class="form-control" name="age" id="age" min="1" required>
+          <label for="phone"><b>Tu teléfono</b></label>
+          <input type="tel" class="form-control" name="phone" id="phone" required>
+        </div>
+        <button class="btn btn-success mt-3 mb-5">Registrarse</button>
+      </form>
+    </main>
+    <footer><a href="/login.html">Iniciar sesión</a></footer>    
+  </body>
+</html>

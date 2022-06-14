@@ -1,0 +1,147 @@
+<style>
+  body {
+    margin: 10px;
+  }
+</style>
+<header>
+  <h1 style="color:blue;">Productos</h1>
+  {{#if user}}
+    <h2>Bienvenido, {{user}}</h2>
+    <a href="/api/logoff">Salir</a>
+  {{/if}}
+  {{#unless user}}
+    <a href="/api/signin">Iniciar sesión</a>
+    <a href="/api/signup">Registrarse</a>
+  {{/unless}}
+</header>
+<main>
+  <div class="container mt-3">
+    <div class="jumbotron">
+      <h3 style="color:blue;">Nuevo producto</h3>
+      <br />
+      <form onsubmit="return addProduct(this)">
+        <div class="form-group">
+          <label for="title"><b>Nombre</b></label>
+          <input
+            id="title"
+            class="form-control"
+            type="text"
+            name="title"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="price"><b>Precio</b></label>
+          <input
+            id="price"
+            class="form-control"
+            type="number"
+            name="price"
+            min="1"
+            step="0.01"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="thumbnail"><b>Url de imagen</b></label>
+          <input
+            id="thumbnail"
+            class="form-control"
+            type="url"
+            name="thumbnail"
+            required
+          />
+        </div>
+        <button class="btn btn-success mt-3 mb-5">Enviar</button>
+      </form>
+    </div>
+  </div>
+</main>
+<aside>
+  <div id="productos">
+    <h3>Lista de productos</h3>
+    <div class="table-responsive">
+      <table class="table table-dark" id="tableOfProducts">
+        <thead><tr style="color: yellow;">
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Thumbnail</th>
+          </tr></thead>
+        <tbody id="tbproducts"></tbody>
+      </table>
+    </div>
+  </div>
+  <hr />
+  <div class="container-fluid mt-3" id="chat">
+    <h3>Centro de mensajes</h3>
+    <div id="messages"></div>
+    <form
+      class="form-inline"
+      onsubmit="return addMessage(this)"
+      autocomplete="off"
+    >
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control my-2 mr-2"
+        placeholder="Ingresa tu email"
+        required
+      />
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        id="nombre"
+        class="form-control my-2 mr-2"
+        placeholder="Ingresa tu nombre"
+        required
+      />
+      <label for="apellido">Apellido</label>
+      <input
+        type="text"
+        id="apellido"
+        class="form-control my-2 mr-2"
+        placeholder="Ingresa tu apellido"
+        required
+      />
+      <label for="edad">Edad</label>
+      <input
+        type="number"
+        id="edad"
+        class="form-control my-2 mr-2"
+        placeholder="Ingresa tu edad"
+        required
+      />
+      <label for="alias">Alias</label>
+      <input
+        type="text"
+        id="alias"
+        class="form-control my-2 mr-2"
+        placeholder="Ingresa tu alias"
+        required
+      />
+      <label for="avatar">Avatar</label>
+      <input
+        type="url"
+        id="avatar"
+        class="form-control my-2 mr-2"
+        placeholder="Ingresa tu avatar"
+        required
+      />
+      <label for="message">Mensaje</label>
+      <input
+        type="text"
+        id="message"
+        class="form-control my-2 mr-2"
+        placeholder="Cuéntanos algo..."
+        required
+      />
+      <input class="btn btn-primary my-2" type="submit" value="Enviar!" />
+    </form>
+  </div>
+</aside>
+<footer>
+  <a href="/productos">Ver lista de productos</a>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+<script src="/js/main.js"></script>

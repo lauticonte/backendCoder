@@ -1,0 +1,28 @@
+{
+  "name": "desafio13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Lautaro Conte",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^6.2.0",
+    "bcrypt": "^5.0.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.3.1",
+    "normalizr": "^3.6.2",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.5.0",
+    "yargs": "^17.4.1"
+  }
+}

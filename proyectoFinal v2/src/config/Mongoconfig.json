@@ -1,0 +1,5 @@
+{
+    "MONGOLOCAL": "mongodb://localhost:27017/ecommerce",
+    "MONGOATLAS": "mongodb+srv://Lautaro:12345@codercluster18335.zy1j9.mongodb.net/ecommerce?retryWrites=true&w=majority"    
+}
+

@@ -1,0 +1,21 @@
+<header>
+  <h1 style="color:blue;">Iniciar sesion</h1>
+</header>
+<main>
+  <form action="/api/signin" method="post">
+    <div class="form-group">
+      <label for="username"><b>Email</b></label>
+      <input
+        id="username"
+        class="form-control"
+        type="text"
+        name="username"
+        required
+      />
+      <label for="password"><b>Contraseña</b></label>
+      <input type="password" class="form-control" name="password" id="password" required>
+    </div>
+    <button class="btn btn-success mt-3 mb-5">Iniciar sesión</button>
+  </form>
+</main>
+<footer><a href="/api/signup">Registrarse</a></footer>

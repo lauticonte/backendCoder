@@ -1,0 +1,273 @@
+➜ D:\ ❯ mongo
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("76e789ee-629c-46cc-8ef0-804e43cc840e") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-03-15T10:11:12.656-03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin       0.000GB
+basePrueba  0.000GB
+config      0.000GB
+local       0.000GB
+nuevabase   0.000GB
+sistema     0.000GB
+> use ecommerce
+switched to db ecommerce
+> db.createCollection("productos")
+{ "ok" : 1 }
+> show collections
+productos
+> db.createCollection("mensajes")
+{ "ok" : 1 }
+> db.productos.insertMany( [ {
+title: 'Lapicera',
+price: 150,
+thumbnail: "https://bic.com/lapicera.png"
+},
+{
+title: 'Regla',
+price: 342,
+thumbnail: "https://bic.com/regla.png"
+},
+{
+title: 'Max Steel',
+price: 1782,
+thumbnail: "https://maxsteel.com/granmaxsteel.png" 
+},
+{
+title: 'iPod',
+price: 4385,
+thumbnail: "https://rojo.com/ipod.png" 
+},
+{
+title: 'Lentes',
+price: 1965,
+thumbnail: "https://rojo.com/lentes.png" 
+},
+{
+title: 'Auriculares',
+price: 1780,
+thumbnail: "https://rojo.com/auris.png" 
+},
+{
+title: 'Cartas',
+price: 307,
+thumbnail: "https://rojo.com/cartas.png" 
+},
+{
+title: 'Control remoto',
+price: 200,
+thumbnail: "https://controles.com/cremoto23.png" 
+},
+{
+title: 'Alexa',
+price: 3500,
+thumbnail: "https://amazon.com/alexa.png" 
+},
+{
+title: 'Cartuchera',
+price: 560,
+thumbnail: "https://rojo.com/cartuchera.png" 
+}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("62324345140293effb75f8ca"),
+                ObjectId("62324345140293effb75f8cb"),
+                ObjectId("62324345140293effb75f8cc"),
+                ObjectId("62324345140293effb75f8cd"),
+                ObjectId("62324345140293effb75f8ce"),
+                ObjectId("62324345140293effb75f8cf"),
+                ObjectId("62324345140293effb75f8d0"),
+                ObjectId("62324345140293effb75f8d1"),
+                ObjectId("62324345140293effb75f8d2"),
+                ObjectId("62324345140293effb75f8d3")
+        ]
+}
+> db.mensajes.insertMany( [ {
+email: "lauti@gmail.com",
+message: "Hola",
+date: "16/03/2022 20:30:00"
+},
+{
+email: "apm1405@gmail.com",
+message: "Buenas",
+date: "16/03/2022 20:30:10"
+},
+{
+email: "lauti@gmail.com",
+message: "Como andas?",
+date: "16/03/2022 20:31:20"
+},
+{
+email: "apm1405@gmail.com",
+message: "Bien y vos?",
+date: "16/03/2022 20:32:15"
+},
+{
+email: "lauti@gmail.com",
+message: "Todo bien",
+date: "16/03/2022 20:32:51"
+},
+{
+email: "lauti@gmail.com",
+message: "Que andas haciendo?",
+date: "16/03/2022 20:33:08"
+},
+{
+email: "apm1405@gmail.com",
+message: "Jugando, vos?",
+date: "16/03/2022 20:34:00"
+},
+{
+email: "lauti@gmail.com",
+message: "Nada",
+date: "16/03/2022 20:34:30"
+},
+{
+email: "apm1405@gmail.com",
+message: "Bueno, me tengo que ir",
+date: "16/03/2022 20:35:24"
+},
+{
+email: "lauti@gmail.com",
+message: "Yo también. Chau!",
+date: "16/03/2022 20:35:44"
+}
+])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("623243d7140293effb75f8d4"),
+                ObjectId("623243d7140293effb75f8d5"),
+                ObjectId("623243d7140293effb75f8d6"),
+                ObjectId("623243d7140293effb75f8d7"),
+                ObjectId("623243d7140293effb75f8d8"),
+                ObjectId("623243d7140293effb75f8d9"),
+                ObjectId("623243d7140293effb75f8da"),
+                ObjectId("623243d7140293effb75f8db"),
+                ObjectId("623243d7140293effb75f8dc"),
+                ObjectId("623243d7140293effb75f8dd")
+        ]
+}
+> db.productos.find()
+{ "_id" : ObjectId("62324345140293effb75f8ca"), "title" : "Lapicera", "price" : 150, "thumbnail" : "https://bic.com/lapicera.png" }
+{ "_id" : ObjectId("62324345140293effb75f8cb"), "title" : "Regla", "price" : 342, "thumbnail" : "https://bic.com/regla.png" }
+{ "_id" : ObjectId("62324345140293effb75f8cc"), "title" : "Max Steel", "price" : 1782, "thumbnail" : "https://maxsteel.com/granmaxsteel.png" }
+{ "_id" : ObjectId("62324345140293effb75f8cd"), "title" : "iPod", "price" : 4385, "thumbnail" : "https://rojo.com/ipod.png" }
+{ "_id" : ObjectId("62324345140293effb75f8ce"), "title" : "Lentes", "price" : 1965, "thumbnail" : "https://rojo.com/lentes.png" }
+{ "_id" : ObjectId("62324345140293effb75f8cf"), "title" : "Auriculares", "price" : 1780, "thumbnail" : "https://rojo.com/auris.png" }
+{ "_id" : ObjectId("62324345140293effb75f8d0"), "title" : "Cartas", "price" : 307, "thumbnail" : "https://rojo.com/cartas.png" }
+{ "_id" : ObjectId("62324345140293effb75f8d1"), "title" : "Control remoto", "price" : 200, "thumbnail" : "https://controles.com/cremoto23.png" }
+{ "_id" : ObjectId("62324345140293effb75f8d2"), "title" : "Alexa", "price" : 3500, "thumbnail" : "https://amazon.com/alexa.png" }
+{ "_id" : ObjectId("62324345140293effb75f8d3"), "title" : "Cartuchera", "price" : 560, "thumbnail" : "https://rojo.com/cartuchera.png" }
+> db.mensajes.find()
+{ "_id" : ObjectId("623243d7140293effb75f8d4"), "email" : "lauti@gmail.com", "message" : "Hola", "date" : "16/03/2022 20:30:00" }
+{ "_id" : ObjectId("623243d7140293effb75f8d5"), "email" : "apm1405@gmail.com", "message" : "Buenas", "date" : "16/03/2022 20:30:10" }
+{ "_id" : ObjectId("623243d7140293effb75f8d6"), "email" : "lauti@gmail.com", "message" : "Como andas?", "date" : "16/03/2022 20:31:20" }
+{ "_id" : ObjectId("623243d7140293effb75f8d7"), "email" : "apm1405@gmail.com", "message" : "Bien y vos?", "date" : "16/03/2022 20:32:15" }
+{ "_id" : ObjectId("623243d7140293effb75f8d8"), "email" : "lauti@gmail.com", "message" : "Todo bien", "date" : "16/03/2022 20:32:51" }
+{ "_id" : ObjectId("623243d7140293effb75f8d9"), "email" : "lauti@gmail.com", "message" : "Que andas haciendo?", "date" : "16/03/2022 20:33:08" }
+{ "_id" : ObjectId("623243d7140293effb75f8da"), "email" : "apm1405@gmail.com", "message" : "Jugando, vos?", "date" : "16/03/2022 20:34:00" }
+{ "_id" : ObjectId("623243d7140293effb75f8db"), "email" : "lauti@gmail.com", "message" : "Nada", "date" : "16/03/2022 20:34:30" }
+{ "_id" : ObjectId("623243d7140293effb75f8dc"), "email" : "apm1405@gmail.com", "message" : "Bueno, me tengo que ir", "date" : "16/03/2022 20:35:24" }
+{ "_id" : ObjectId("623243d7140293effb75f8dd"), "email" : "lauti@gmail.com", "message" : "Yo también. Chau!", "date" : "16/03/2022 20:35:44" }
+> db.productos.estimatedDocumentCount()
+10
+> db.mensajes.estimatedDocumentCount()
+10
+> db.productos.insertOne( {title: "iPhone 12", price: 1050, thumbnail: "http://apple.com//iphone12.png"})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("62324458140293effb75f8de")
+}
+> db.productos.find( {title: "iPhone 12"})
+{ "_id" : ObjectId("62324458140293effb75f8de"), "title" : "iPhone 12", "price" : 1050, "thumbnail" : "http://apple.com//iphone12.png" }
+> db.productos.find( {price: {$lt: 1000}})
+{ "_id" : ObjectId("62324345140293effb75f8ca"), "title" : "Lapicera", "price" : 150, "thumbnail" : "https://bic.com/lapicera.png" }
+{ "_id" : ObjectId("62324345140293effb75f8cb"), "title" : "Regla", "price" : 342, "thumbnail" : "https://bic.com/regla.png" }
+{ "_id" : ObjectId("62324345140293effb75f8d0"), "title" : "Cartas", "price" : 307, "thumbnail" : "https://rojo.com/cartas.png" }
+{ "_id" : ObjectId("62324345140293effb75f8d1"), "title" : "Control remoto", "price" : 200, "thumbnail" : "https://controles.com/cremoto23.png" }
+{ "_id" : ObjectId("62324345140293effb75f8d3"), "title" : "Cartuchera", "price" : 560, "thumbnail" : "https://rojo.com/cartuchera.png" }
+> db.productos.find( {price: {$gte: 1000, $lte:3000}})
+{ "_id" : ObjectId("62324345140293effb75f8cc"), "title" : "Max Steel", "price" : 1782, "thumbnail" : "https://maxsteel.com/granmaxsteel.png" }
+{ "_id" : ObjectId("62324345140293effb75f8ce"), "title" : "Lentes", "price" : 1965, "thumbnail" : "https://rojo.com/lentes.png" }
+{ "_id" : ObjectId("62324345140293effb75f8cf"), "title" : "Auriculares", "price" : 1780, "thumbnail" : "https://rojo.com/auris.png" }
+{ "_id" : ObjectId("62324458140293effb75f8de"), "title" : "iPhone 12", "price" : 1050, "thumbnail" : "http://apple.com//iphone12.png" }
+> db.productos.find( {price: {$gt: 3000}})
+{ "_id" : ObjectId("62324345140293effb75f8cd"), "title" : "iPod", "price" : 4385, "thumbnail" : "https://rojo.com/ipod.png" }
+{ "_id" : ObjectId("62324345140293effb75f8d2"), "title" : "Alexa", "price" : 3500, "thumbnail" : "https://amazon.com/alexa.png" }
+> db.productos.find({}, {"title":1, "_id":0}).skip(2).limit(1).sort({price: 1})
+{ "title" : "Cartas" }
+> db.productos.updateMany({stock: {$exists: false}}, {$set: {stock: 100}})
+{ "acknowledged" : true, "matchedCount" : 11, "modifiedCount" : 11 }
+> db.productos.find({}, {"title":1, "stock":1, "_id":0})
+{ "title" : "Lapicera", "stock" : 100 }
+{ "title" : "Regla", "stock" : 100 }
+{ "title" : "Max Steel", "stock" : 100 }
+{ "title" : "iPod", "stock" : 100 }
+{ "title" : "Lentes", "stock" : 100 }
+{ "title" : "Auriculares", "stock" : 100 }
+{ "title" : "Cartas", "stock" : 100 }
+{ "title" : "Control remoto", "stock" : 100 }
+{ "title" : "Alexa", "stock" : 100 }
+{ "title" : "Cartuchera", "stock" : 100 }
+{ "title" : "iPhone 12", "stock" : 100 }
+> db.productos.updateMany({price: {$gt: 4000}}, {$set: {stock:0}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.productos.find({}, {"title":1, "stock":1, "_id":0})
+{ "title" : "Lapicera", "stock" : 100 }
+{ "title" : "Regla", "stock" : 100 }
+{ "title" : "Max Steel", "stock" : 100 }
+{ "title" : "iPod", "stock" : 0 }
+{ "title" : "Lentes", "stock" : 100 }
+{ "title" : "Auriculares", "stock" : 100 }
+{ "title" : "Cartas", "stock" : 100 }
+{ "title" : "Control remoto", "stock" : 100 }
+{ "title" : "Alexa", "stock" : 100 }
+{ "title" : "Cartuchera", "stock" : 100 }
+{ "title" : "iPhone 12", "stock" : 100 }
+> db.productos.deleteMany({price: {$lt: 1000}})
+{ "acknowledged" : true, "deletedCount" : 5 }
+> db.productos.find({}, {"title":1, "stock":1, "price": 1, "_id":0})
+{ "title" : "Max Steel", "price" : 1782, "stock" : 100 }
+{ "title" : "iPod", "price" : 4385, "stock" : 0 }
+{ "title" : "Lentes", "price" : 1965, "stock" : 100 }
+{ "title" : "Auriculares", "price" : 1780, "stock" : 100 }
+{ "title" : "Alexa", "price" : 3500, "stock" : 100 }
+{ "title" : "iPhone 12", "price" : 1050, "stock" : 100 }
+> use admin
+switched to db admin
+> db.createUser({user: "pepe", pwd: "asd456", roles: [ { role: "read", db: "ecommerce"}]})
+Successfully added user: {
+        "user" : "pepe",
+        "roles" : [
+                {
+                        "role" : "read",
+                        "db" : "ecommerce"
+                }
+        ]
+}
+> exit
+bye

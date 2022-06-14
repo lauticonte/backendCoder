@@ -1,0 +1,14 @@
+[
+  {
+    "name": "patotas",
+    "specie": "perro",
+    "thumbnail": "hoola.jpg",
+    "id": 1
+  },
+  {
+    "name": "perrazo",
+    "specie": "perro",
+    "thumbnail": "cas.jpg",
+    "id": null
+  }
+]
