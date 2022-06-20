@@ -1,7 +1,5 @@
-const {asProductDto} = require('../dtos/productoDto')
 const generarProductos = require('../utils/generador-productos')
 const generarIds = require('../utils/generador-ids')
-const logger = require('../utils/logger');
 
 class ProductoDaoMem {
   constructor() {
@@ -9,11 +7,11 @@ class ProductoDaoMem {
   }
 
   init() {
-    logger.info('productos dao en memoria -> listo')
+    console.log('productos dao en memoria -> listo')
   }
 
   disconnect() {
-    logger.info('productos dao en memoria -> cerrado')
+    console.log('productos dao en memoria -> cerrado')
   }
 
   #getIndex(id) {
@@ -21,16 +19,16 @@ class ProductoDaoMem {
   }
 
   getAll() {
-    return asProductDto(this.productos)
+    return asDto(this.productos)
   }
 
   getById(id) {
-    return asProductDto(this.productos[ this.#getIndex(id) ])
+    return asDto(this.productos[ this.#getIndex(id) ])
   }
 
   save(obj) {
     this.productos.push(obj)
-    return asProductDto(obj)
+    return asDto(obj)
   }
   popular(cant = 5) {
     const nuevos = []
@@ -39,7 +37,7 @@ class ProductoDaoMem {
       const guardado = this.save(nuevoProducto)
       nuevos.push(guardado)
     }
-    return asProductDto(nuevos)
+    return asDto(nuevos)
   }
 
   deleteAll() {
@@ -48,14 +46,14 @@ class ProductoDaoMem {
 
   deleteById(id) {
     const [ borrada ] = this.productos.splice(this.#getIndex(id), 1)
-    return asProductDto(borrada)
+    return asDto(borrada)
   }
 
   update(id, campos) {
     const index = this.#getIndex(id)
     const actualizada = { ...this.productos[ index ], ...campos }
     this.productos.splice(index, 1, actualizada)
-    return asProductDto(actualizada)
+    return asDto(actualizada)
   }
 }
 

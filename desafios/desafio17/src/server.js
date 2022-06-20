@@ -16,6 +16,7 @@ const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
 const compression = require('compression');
 const logger = require('./utils/logger.js');
+var path = require ('path');
 
 const errorHandler = require("./middlewares/errorHandler");
 const notFound = require("./middlewares/notFound");
@@ -52,9 +53,9 @@ else {
     })
   );
   app.set("view engine", "hbs");
-  app.set("views", "./views");
+  app.set('views', __dirname + '/views');
 
-  app.use(express.static("./public"));
+  app.use(express.static(path.join(__dirname + './public')));
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
   app.use(compression());

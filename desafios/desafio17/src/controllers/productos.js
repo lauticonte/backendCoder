@@ -1,9 +1,13 @@
 const productService = require('../services/productService');
+const logger = require('../utils/logger');
 
 const getProductosTest = async (req, res, next) => {
   try {
     const arrayDeProductos = await productService.getAll();
-    res.json(arrayDeProductos);
+    if (arrayDeProductos.length === 0) {
+      throw new Error("No hay productos");
+    }
+    res.render("datos", { arrayDeProductos });
   } catch (err) {
     next(err);
   }
@@ -23,7 +27,7 @@ const getProductById = async (req, res, next) => {
 
 const postProducto = async (req, res, next) => {
   try {
-    res.json(await productService.save(req.query.cant));
+    res.json(await productService.popular(req.query.cant));
   } catch (err) {
     next(err);
   }

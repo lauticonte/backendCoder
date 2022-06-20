@@ -38,7 +38,7 @@ function renderMessages(data) {
         <span style="color: blue; font-weight: bold;">${elem.author.apellido}</span>
         <span style="color: blue; font-weight: bold;">(${elem.author.id}),</span>
         <span style="color: blue; font-weight: bold;">(${elem.author.alias})</span>
-        <span style="color: blue; font-weight: bold;"><img src="${elem.author.avatar}" alt="Avatar del usuario"></span>
+        <span style="color: blue; font-weight: bold;"><img src="${elem.author.avatar}" alt="Avatar del usuario" style="width: 50px"></span>
         <span style="color: brown;">[${elem.date}]:</span>
         <span style="color: green; font-style: italic;">${elem.text}</span></div>`;
     })
