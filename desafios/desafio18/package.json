@@ -1,0 +1,35 @@
+{
+  "name": "desafio18",
+  "version": "1.0.0",
+  "description": "Desafio 6, websockets",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha ./src/test/api-test.js",
+    "start": "node ./src/server.js"
+  },
+  "author": "Lautaro Conte",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.6",
+    "autocannon": "^7.7.2",
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "chai": "^4.3.6",
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "log4js": "^6.4.3",
+    "mocha": "^9.2.2",
+    "mongoose": "^6.2.3",
+    "normalizr": "^3.6.1",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.4.1",
+    "supertest": "^6.2.3",
+    "yargs": "^17.3.1"
+  }
+}
